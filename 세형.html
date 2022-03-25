@@ -15,21 +15,24 @@
                 </ol>
             <div id="article" style="padding-left: 5px;">            
                 <h2>이세형 개인 사진전</h2>
-                <img src="사진\세형\라인프랜즈_토끼.jpg" width="450"><br>
-                <img src="사진\세형\라인프랜즈_곰.jpg" width="450"><br>
+                <img src="사진\세형\라인프랜즈_토끼.jpg" width="300"></br></br>
+                <img src="사진\세형\라인프랜즈_곰.jpg" width="300"></br>
             </div>
         </div>
 
 
         <script>
+            const lshTitle = document.querySelector("#article h2");
+            
+            lshTitle.textContent = "제목 내 맘대로 바꿈"
+            lshTitle.style.color = "tomato";
 
-            //클릭 이벤트 추가
-            //세형 버튼
+
             const lshButton = document.querySelector('#lshName');
             console.log(lshButton);
             
             function lshNameClick(){
-                alert('존잘이세형')
+                alert('존잘 이세형')
             }
             lshButton.addEventListener('click',lshNameClick);
         </script>

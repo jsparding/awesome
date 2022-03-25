@@ -34,14 +34,28 @@
         <div id="grid">
                 <ol>
                     <li><a href="운형.html">이운형</a></li>
-                    <li><a href="세형.html">이세형</a></li>
+                    <li><a href="세형.html" id = "lshName">이세형</a></li>
                     <li><a href="정욱.html">이정욱</a></li>
                 </ol>
             <div id="article" style="padding-left: 5px;">            
                 <h2>이세형 개인 사진전</h2>
-                <img src="사진\세형\KakaoTalk_20220320_015626958.jpg" width="450"><br>
-                <img src="사진\세형\KakaoTalk_20220304_101655572.jpg" width="450"><br>
+                <img src="사진\세형\라인프랜즈_토끼.jpg" width="450"><br>
+                <img src="사진\세형\라인프랜즈_곰.jpg" width="450"><br>
             </div>
         </div>
+
+
+        <script>
+
+            //클릭 이벤트 추가
+            //세형 버튼
+            const lshButton = document.querySelector('#lshName');
+            console.log(lshButton);
+            
+            function lshNameClick(){
+                alert('존잘이세형')
+            }
+            lshButton.addEventListener('click',lshNameClick);
+        </script>
     </body>
 </html>

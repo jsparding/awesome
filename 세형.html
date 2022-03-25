@@ -24,8 +24,35 @@
         <script>
             const lshTitle = document.querySelector("#article h2");
             
-            lshTitle.textContent = "제목 내 맘대로 바꿈"
+            lshTitle.textContent = "클릭하면 글자 색 바꿈 , 더블클릭하면 배경색도 바꿈"
             lshTitle.style.color = "tomato";
+
+            function lshTitleClick() {
+                let titleColor;
+                console.log(lshTitle.style.color);
+                titleColor = lshTitle.style.color;
+                if (titleColor === 'tomato'){
+                    titleColor = 'skyblue';
+                }
+                else{
+                    titleColor = 'tomato';
+                }
+                lshTitle.style.color =titleColor;
+            }
+            function lshTitleDblClick() {
+                let titleBgColor;
+                console.log(lshTitle.style.backgroundColor);
+                titleBgColor = lshTitle.style.backgroundColor;
+                if (titleBgColor === 'grey'){
+                    titleBgColor = 'pink';
+                }
+                else{
+                    titleBgColor = 'grey';
+                }
+                lshTitle.style.backgroundColor = titleBgColor;
+            }
+            lshTitle.addEventListener('click',lshTitleClick);
+            lshTitle.addEventListener('dblclick', lshTitleDblClick)
 
 
             const lshButton = document.querySelector('#lshName');

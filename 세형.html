@@ -14,7 +14,7 @@
                     <li><a href="정욱.html">이정욱</a></li>
                 </ol>
             <div id="article" style="padding-left: 5px;">            
-                <h2>이세형 개인 사진전</h2>
+                <h2 class="lshTitle">이세형 개인 사진전</h2>
                 <img src="사진\세형\라인프랜즈_토끼.jpg" width="300"></br></br>
                 <img src="사진\세형\라인프랜즈_곰.jpg" width="300"></br>
             </div>
@@ -24,35 +24,28 @@
         <script>
             const lshTitle = document.querySelector("#article h2");
             
-            lshTitle.textContent = "클릭하면 글자 색 바꿈 , 더블클릭하면 배경색도 바꿈"
-            lshTitle.style.color = "tomato";
+            lshTitle.textContent = "클릭하면 글자 색 바꿈"
 
             function lshTitleClick() {
-                let titleColor;
-                console.log(lshTitle.style.color);
-                titleColor = lshTitle.style.color;
-                if (titleColor === 'tomato'){
-                    titleColor = 'skyblue';
-                }
-                else{
-                    titleColor = 'tomato';
-                }
-                lshTitle.style.color =titleColor;
-            }
-            function lshTitleDblClick() {
-                let titleBgColor;
-                console.log(lshTitle.style.backgroundColor);
-                titleBgColor = lshTitle.style.backgroundColor;
-                if (titleBgColor === 'grey'){
-                    titleBgColor = 'pink';
-                }
-                else{
-                    titleBgColor = 'grey';
-                }
-                lshTitle.style.backgroundColor = titleBgColor;
+                console.log(lshTitle.className);
+                lshTitle.classList.toggle('titleClicked');
             }
             lshTitle.addEventListener('click',lshTitleClick);
-            lshTitle.addEventListener('dblclick', lshTitleDblClick)
+
+            // function lshTitleDblClick() {
+            //     let titleBgColor;
+            //     console.log(lshTitle.style.backgroundColor);
+            //     titleBgColor = lshTitle.style.backgroundColor;
+            //     if (titleBgColor === 'grey'){
+            //         titleBgColor = 'pink';
+            //     }
+            //     else{
+            //         titleBgColor = 'grey';
+            //     }
+            //     lshTitle.style.backgroundColor = titleBgColor;
+            // }
+            
+            // lshTitle.addEventListener('dblclick', lshTitleDblClick)
 
 
             const lshButton = document.querySelector('#lshName');

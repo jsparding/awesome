@@ -1,60 +1,43 @@
-<!doctype  html>
+<!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <title>web1 - WELCOME</title>    
-        <link rel="stylesheet" href="style.css">
-    </head> 
-    <body style="margin-top: 0;">
-        <h1><a href="index.html" style="text-decoration: none;">ASPHALT</a></h1>
+        <meta charset="utf-8" />
+        <title>web1 - WELCOME</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body style="margin-top: 0">
+        <h1><a href="index.html" style="text-decoration: none">ASPHALT</a></h1>
         <div id="grid">
-                <ol>
-                    <li><a href="운형.html">이운형</a></li>
-                    <li><a href="세형.html" id = "lshName">이세형</a></li>
-                    <li><a href="정욱.html">이정욱</a></li>
-                </ol>
-            <div id="article" style="padding-left: 5px;">            
-                <h2 class="lshTitle">이세형 개인 사진전</h2>
-                <img src="사진\세형\라인프랜즈_토끼.jpg" width="300"></br></br>
-                <img src="사진\세형\라인프랜즈_곰.jpg" width="300"></br>
+            <ol>
+                <li><a href="운형.html">이운형</a></li>
+                <li><a href="세형.html" id="lshName">이세형</a></li>
+                <li><a href="정욱.html">이정욱</a></li>
+            </ol>
+            <div id="article" style="padding-left: 5px">
+                <h2 class="subTitle">이세형 개인 사진전</h2>
+                <img src="사진\세형\라인프랜즈_토끼.jpg" width="300" /><br /><br />
+                <img src="사진\세형\라인프랜즈_곰.jpg" width="300" /><br />
             </div>
         </div>
 
-
         <script>
-            const lshTitle = document.querySelector("#article h2");
-            
-            lshTitle.textContent = "클릭하면 글자 색 바꿈"
+            const subTitle = document.querySelector("#article h2");
 
-            function lshTitleClick() {
-                console.log(lshTitle.className);
-                lshTitle.classList.toggle('titleClicked');
+            subTitle.textContent = `${subTitle.textContent} <<클릭하면 글자 색 바뀜`;
+
+            function subTitleClick() {
+                console.log(subTitle.className);
+                subTitle.classList.toggle("titleClicked");
             }
-            lshTitle.addEventListener('click',lshTitleClick);
+            subTitle.addEventListener("click", subTitleClick);
 
-            // function lshTitleDblClick() {
-            //     let titleBgColor;
-            //     console.log(lshTitle.style.backgroundColor);
-            //     titleBgColor = lshTitle.style.backgroundColor;
-            //     if (titleBgColor === 'grey'){
-            //         titleBgColor = 'pink';
-            //     }
-            //     else{
-            //         titleBgColor = 'grey';
-            //     }
-            //     lshTitle.style.backgroundColor = titleBgColor;
-            // }
-            
-            // lshTitle.addEventListener('dblclick', lshTitleDblClick)
-
-
-            const lshButton = document.querySelector('#lshName');
+            const lshButton = document.querySelector("#lshName");
             console.log(lshButton);
-            
-            function lshNameClick(){
-                alert('존잘 이세형')
+
+            function lshNameClick() {
+                alert("존잘 이세형");
             }
-            lshButton.addEventListener('click',lshNameClick);
+            lshButton.addEventListener("click", lshNameClick);
         </script>
     </body>
 </html>

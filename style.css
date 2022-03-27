@@ -21,15 +21,16 @@ ol {
     margin-left: 10px;
 }
 /* 리스트 밑줄 없애는 것 ↓ */
-#grid li a{
+#grid li a {
     text-decoration: none;
 }
 
-.lshTitle {
+.subTitle {
     color: brown;
     transition: color 0.5s ease-in-out;
 }
 .titleClicked {
     color: slateblue;
     transition: color 0.5s ease-in-out;
+    transition-timing-function: ease;
 }

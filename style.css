@@ -20,6 +20,10 @@ ol {
     grid-template-columns: 150px 1fr;
     margin-left: 10px;
 }
+/* 리스트 밑줄 없애는 것 ↓ */
+#grid li a{
+    text-decoration: none;
+}
 
 .lshTitle {
     color: brown;

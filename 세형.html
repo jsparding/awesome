@@ -4,6 +4,7 @@
         <meta charset="utf-8" />
         <title>web1 - WELCOME</title>
         <link rel="stylesheet" href="style.css" />
+        <!-- ↑ style.css 파일을 불러와줌 -->
     </head>
     <body style="margin-top: 0">
         <h1><a href="index.html" style="text-decoration: none">ASPHALT</a></h1>
@@ -22,7 +23,6 @@
 
         <script>
             const subTitle = document.querySelector("#article h2");
-
             subTitle.textContent = `${subTitle.textContent} <<클릭하면 글자 색 바뀜`;
 
             function subTitleClick() {
